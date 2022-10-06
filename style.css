@@ -17,6 +17,7 @@ body{
 .title{
     font-size: 3em;
     margin: 20px;
+    text-align: center;
 }
 .img{
     cursor: pointer;
