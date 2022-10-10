@@ -1,29 +1,15 @@
 const tag=parameter=>document.getElementById(parameter);
-const img0=tag('img0');
-const img1=tag('img1');
-const img2=tag('img2');
-const img3=tag('img3');
-const img4=tag('img4');
-const img5=tag('img5');
-const img6=tag('img6');
-const img7=tag('img7');
-const img8=tag('img8');
+const img=document.querySelectorAll('.img');
 const btnVal=tag('validate');
 const btnRes=tag('restart');
 const txtResult=tag('result');
 
+img.forEach((x,i)=>{
+    x.addEventListener('click', ()=>select(i));
+})
+
 let cards=[0,1,2,3,4,5,6,7,8];
 let clicks=0, firstClick=0, secondClick=0;
-
-img0.addEventListener('click', ()=> select(0));
-img1.addEventListener('click', ()=> select(1));
-img2.addEventListener('click', ()=> select(2));
-img3.addEventListener('click', ()=> select(3));
-img4.addEventListener('click', ()=> select(4));
-img5.addEventListener('click', ()=> select(5));
-img6.addEventListener('click', ()=> select(6));
-img7.addEventListener('click', ()=> select(7));
-img8.addEventListener('click', ()=> select(8));
 
 function select(index){
     clicks++;
